@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Titles</title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link href="/css/index.css" rel="stylesheet" type="text/css">
+
+
+</head>
+ <% include partials/nav.ejs %>
+<body>
+
+<center><h2>My Books</h2></center>
+
+
+<form action="/book" method="post">  
+  <input name="book" type="text" class="form-control" placeholder="paste a book" required>
+  </label>  
+  </label>  
+  <input type="submit" value="Submit" class="btn btn-primary btn-block">
+</form>
+
+<% results.forEach(function(user) { %>
+
+ <form action="/sub" method="post">
+<div class="wrap"> 
+     
+    <div class="layer1"> <img src=" <%= user.thumbnail%>" alt="some_text" height="90" width="90"></div>
+    <div class="layer3"><input type="radio" id="rd3" name="public" value="<%= user.thumbnail %> " required >Public </div>
+    <div class="layer5"><input type="radio" id="rd3" name="skase" value="<%= user.skase %> " required >Name </div>          
+    <div class="layer3"><input type="radio" id="rd3" name="title" value="<%= user.title %> " required ><%= user.title %> </div>
+    <input type="submit" value="Trade" > 
+    
+  
+</div>
+</form>
+
+  <% }) %>
+
+
+</body>
+<% include partials/footer.ejs %>
+</html>

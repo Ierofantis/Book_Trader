@@ -1,0 +1,127 @@
+#result {
+  background-color: $skin;
+  padding: 1px;
+  margin: 15px auto;
+  width: 80%;
+  h2 {
+    margin: 0 5px 5px;
+  }
+  p {
+    margin: 0 5px 5px;
+  }
+}
+
+h1 {
+  width: auto;
+  padding-top: 90px;
+  padding-bottom: 20px;
+  color: white;
+  background-attachment: fixed;
+  background-size: cover;
+  font-size: 550%;
+  font-family: Oldtown, fantasy;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    color: $lighterText;
+    #result {
+      border-left: 3px solid $gold;
+    }
+  }
+}
+
+.row {
+  text-align: center;
+}
+
+body {
+  background-color: #eeeeee;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-aling: center;
+  background-position: center;
+}
+body {
+  background: #35dc9b;
+}
+
+h2 {
+   display: table;
+  margin: 40px auto;
+  background-color: #b8b8b8;
+  font: 20px Helvetica;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+
+
+form {
+  display: table;
+  margin: 40px auto;
+  
+  label {
+    position: relative;
+    display: block;
+    
+    input {
+      font: 18px Helvetica, Arial, sans-serif;
+      box-sizing: border-box;
+      display: block;
+      border: none;
+      padding: 20px;
+      width: 300px;
+      margin-bottom: 20px;
+      font-size: 18px;
+      outline: none;
+      transition: all 0.2s ease-in-out;
+      
+      &::placeholder {
+        transition: all 0.2s ease-in-out;
+        color: #999;
+        font: 18px Helvetica, Arial, sans-serif;
+      }
+      
+      &:focus, &.populated {
+        padding-top: 28px;
+        padding-bottom: 12px;
+        
+        &::placeholder {
+          color: transparent;
+        }
+        
+        & + span {
+          opacity: 1;
+          top: 10px;
+        }
+      }
+    }
+    
+    span {
+      color: #35dc9b;
+      font: 13px Helvetica, Arial, sans-serif;
+      position: absolute;
+      top: 0px;
+      left: 20px;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+  
+  input[type="submit"] {
+    transition: all 0.2s ease-in-out;
+    font: 18px Helvetica, Arial, sans-serif;
+    border: none;
+    background: #1aaf75;
+    color: #fff;
+    padding: 16px 40px;
+    
+    &:hover {
+      background: #109f67;
+    }
+  }
+}

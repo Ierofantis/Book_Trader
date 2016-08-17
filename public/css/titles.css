@@ -1,0 +1,20 @@
+body {
+  background-color: #222;
+  background-image: url(https://dl.dropbox.com/u/21192727/p/checkered_pattern.png);
+  font-family: sans-serif;
+}
+.wrap {
+ 
+    width: 100px;
+    min-height: 125px;
+    background-color: #ECECEC;
+    border: 1px solid #C6C6C6;
+    border-radius: 3px;
+    text-align: left;
+    float:left;
+    margin:5px;    
+    background-repeat: no-repeat;
+    
+}
+
+

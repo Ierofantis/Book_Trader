@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+   <link href="/css/index.css" rel="stylesheet" type="text/css">
+    <link href="/css/pin1.css" rel="stylesheet" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+      
+      $( function() {
+
+  var $container = $('.item');
+
+  $container.imagesLoaded( function() {
+    $container.masonry({
+      columnWidth: function( containerWidth ) {
+        return containerWidth / 3
+      }
+    });
+  });
+  
+});
+
+    </script>
+
+</head>
+
+ <% include partials/nav.ejs %>
+
+ 
+    
+      
+  <% data.forEach(function(user) { %>
+
+    <form id = "c" action="/subprof" method="post">
+    
+    <div class="container"> <img src=" <%= user.public %>" alt="" > 
+    <center><h3><%= user.write %> </h3></center>
+    <div class="laye"><input type="radio" id="rd3" name="skase" value="<%= user.skase %> " required ><%= user.skase %>  </div>  
+      <div class="laye"><input type="radio" id="rd3" name="title" value="<%= user.title %> " required ><%= user.title %>  </div>       
+    <div class="lay"><input name="writes" type="text" value="<%= user.write %>" placeholder="Message to <%= user.skase %>"  maxlength="50" required ></div>
+    <input type="submit" value="Trade" > 
+    
+  </div>
+  </form>
+
+
+  <% }) %>
+
+   
+   </div>
+   </html>
+   
+    
+<% include partials/footer.ejs %>
+ 
